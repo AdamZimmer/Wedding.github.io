@@ -1,0 +1,547 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+/* CSS RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  gap: 0;
+  list-style-type: none;
+  transition: 0.5s ease-in-out;
+}
+
+:root {
+  color-scheme: only light;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffcf5;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fffcf5;
+  flex-direction: column;
+  color: #303030;
+  max-width: 768px;
+}
+
+h2 {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 50%;
+  color: #54592e;
+  font-size: 40px;
+  font-weight: 500;
+  margin: 50px 0 0px 0;
+}
+
+h3,
+h4 {
+  font-family: "Great Vibes", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 23px;
+  margin-top: 15px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p,
+td,
+address {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.2px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.text {
+  width: 80%;
+  text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+.text p {
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.margin_1 {
+  margin-top: 20px;
+}
+
+.margin_2 {
+  margin-bottom: 20px;
+}
+
+.margin_3 {
+  margin: 0 auto 10px;
+}
+
+/*Эффекты паралакс*/
+.hidden-box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden-colors {
+  position: relative;
+  width: 70%;
+  height: 50px;
+}
+.hidden-colors .color {
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 2s ease 0.2s;
+}
+
+.visible_2 .color1 {
+  left: 0%;
+  transform: translate(-50%, 0);
+}
+.visible_2 .color2 {
+  left: 33.3%;
+  transform: translate(-50%, 0);
+}
+.visible_2 .color3 {
+  left: 66.6%;
+  transform: translate(-50%, 0);
+}
+.visible_2 .color4 {
+  left: 100%;
+  transform: translate(-50%, 0);
+}
+
+.hidden-heart {
+  opacity: 0;
+  transition: all 1.5s ease 1s;
+}
+
+.visible_3 {
+  opacity: 1;
+}
+
+.photo {
+  position: relative;
+}
+.photo::before {
+  content: " ";
+  position: absolute;
+  bottom: -2px;
+  height: 30px;
+  width: 100%;
+  background-color: #fffcf5;
+  border-radius: 20px 20px 0 0;
+  z-index: 1;
+}
+.photo::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: 0px;
+  height: 30px;
+  width: 100%;
+  background-color: #fffcf5;
+  border-radius: 0 0 20px 20px;
+  z-index: 1;
+}
+
+/* заголовок блок с картинкой  */
+.header {
+  position: relative;
+  text-align: center;
+}
+.header .text1 {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  font-family: "Cormorant Infant", serif;
+  font-size: 90px;
+  line-height: 90px;
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+}
+.header .text2 {
+  letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: #54592E;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  line-height: 55px;
+  font-size: 55px;
+  font-weight: 500;
+  bottom: 5%;
+  color: white;
+}
+.header .text3 {
+  font-family: "WindSong", cursive;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 50%;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 60px;
+  color: white;
+  white-space: nowrap;
+}
+.header::before {
+  content: " ";
+  position: absolute;
+  bottom: -10px;
+  width: 100%;
+  height: 30px;
+  background-color: #fffcf5;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Блок с плейером */
+.audio-container {
+  position: relative;
+  margin: 20px 0;
+}
+.audio-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #cbdda2;
+  transform: translate(-50%, -50%);
+}
+.audio-container .play-pause-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.paused {
+  cursor: pointer;
+}
+.paused .play-pause-button {
+  position: relative;
+}
+.paused .play-pause-button::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 25px solid #cbdda2;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  position: absolute;
+  left: 11px;
+}
+
+.playing .play-pause-button::before, .playing .play-pause-button::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 24px;
+  background-color: #cbdda2;
+}
+.playing .play-pause-button::before {
+  left: 11px;
+}
+.playing .play-pause-button::after {
+  right: 11px;
+}
+
+.calendar table {
+  border-collapse: collapse;
+  text-align: center;
+  margin: 20px 0;
+}
+.calendar table th,
+.calendar table td {
+  padding: 0.4rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+.calendar table .heart {
+  position: relative;
+}
+.calendar table .heart::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -2px;
+  width: 45px;
+  height: 45px;
+  background-image: url("/Png/Heart_1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.venue {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.venue a {
+  width: 25%;
+  max-width: 140px;
+}
+.venue a address {
+  margin-top: 5px;
+  color: #303030;
+}
+.venue .box_map {
+  margin-top: 20px;
+}
+
+/* План дня */
+.day_plan {
+  margin: 20px 0;
+}
+.day_plan .alignment {
+  text-align: left;
+  padding-left: 20px;
+}
+.day_plan tr {
+  text-align: center;
+}
+.day_plan tr img {
+  width: 50px;
+  height: 50px;
+}
+.day_plan tr .bus {
+  width: 60px;
+  height: 50px;
+}
+
+/* Стили для таймера */
+#time {
+  display: flex;
+  justify-content: space-around;
+  width: 380px;
+}
+#time .circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#time .circle svg {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(270deg);
+}
+#time .circle svg circle {
+  fill: transparent;
+  stroke: transparent;
+  stroke-linecap: round;
+}
+#time .circle svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 188.5;
+  stroke-dashoffset: 188.5;
+  transition: stroke-dashoffset 0.5s linear;
+}
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #54592E;
+  font-size: 25px;
+}
+#time div span {
+  display: block;
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#time .dots {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1000;
+}
+#time .dots::before {
+  content: " ";
+  position: absolute;
+  top: -7px;
+  width: 12px;
+  height: 12px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+  transition: transform 0.5s linear;
+}
+
+/*  Анкета гостя */
+.form-container {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  width: 80vw;
+  max-width: 400px;
+  text-align: center;
+  padding: 20px;
+  color: #303030;
+}
+.form-container h3 {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #303030;
+}
+.form-container p {
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.form-container form label {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+}
+.form-container form .hint {
+  font-size: 12px;
+  color: #888;
+  text-align: left;
+  margin: 4px 0 10px 0;
+}
+.form-container form textarea {
+  width: 100%;
+  padding: 10px;
+  padding-left: 2%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #303030;
+  font-size: 14px;
+  letter-spacing: 1px;
+  resize: none;
+}
+.form-container form fieldset {
+  text-align: left;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 16px;
+}
+.form-container form fieldset .radio-group {
+  margin: 10px 0;
+}
+.form-container form fieldset .radio-group input[type=radio] {
+  display: none;
+}
+.form-container form fieldset .radio-group .custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.form-container form fieldset .radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cbdda2;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.form-container form fieldset input[type=radio]:checked + .custom-radio .radio-circle {
+  background-color: #cbdda2;
+  border-color: white;
+}
+.form-container form button {
+  background-color: #303030;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/*Contacts */
+.contacts {
+  margin-bottom: 20px;
+}
+.contacts p {
+  margin-bottom: 0;
+}
+.contacts .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 380px;
+  margin: 0 auto;
+}
+.contacts .icons div p {
+  text-align: center;
+  margin: 0;
+}
+.contacts .icons div img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1.5px solid black;
+  border-radius: 20%;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+  .header .text1 {
+    font-size: 120px;
+    line-height: 120px;
+  }
+  .header .text2 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .header .text3 {
+    font-size: 70px;
+  }
+}/*# sourceMappingURL=wedding.css.map */

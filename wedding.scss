@@ -1,0 +1,627 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+/* CSS RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    gap: 0;
+    list-style-type: none;
+    transition: 0.5s ease-in-out;
+}
+:root {
+    color-scheme: only light;
+}
+
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin heading_h3() {
+    font-family: "WindSong", cursive;
+    font-weight: 400;
+    font-style: normal;
+    opacity: 50%;
+}
+
+body {
+    @include flex();
+    background: #fffcf5;
+
+}
+
+.wrapper {
+    @include flex();
+    background: #fffcf5;
+    flex-direction: column;
+    color: #303030;
+    max-width: 768px;
+}
+
+h2 {
+    @include heading_h3();
+    color: #54592e;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 50px 0 0px 0;
+}
+
+h3,
+h4 {
+    font-family: "Great Vibes", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 23px;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p,
+td,
+address {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1.2px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.text {
+    width: 80%;
+    text-align: justify;
+    hyphens: auto;
+
+    p {
+        margin: 20px 0;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.margin_1 {
+    margin-top: 20px
+}
+
+.margin_2 {
+    margin-bottom: 20px;
+}
+.margin_3 {
+    margin: 0 auto 10px;
+}
+/*Эффекты паралакс*/
+.hidden-box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden-colors {
+
+    position: relative;
+    width: 70%;
+    height: 50px;
+
+    .color {
+        position: absolute;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        transition: all 2s ease 0.2s;
+    }
+}
+
+.visible_2 {
+
+    .color1 {
+        left: 0%;
+        transform: translate(-50%, 0);
+    }
+
+    .color2 {
+        left: 33.3%;
+        transform: translate(-50%, 0);
+    }
+
+    .color3 {
+        left: 66.6%;
+        transform: translate(-50%, 0);
+    }
+
+    .color4 {
+        left: 100%;
+        transform: translate(-50%, 0);
+    }
+}
+
+.hidden-heart {
+    opacity: 0;
+    transition: all 1.5s ease 1s;
+}
+
+.visible_3 {
+    opacity: 1;
+}
+
+.photo {
+    position: relative;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        bottom: -2px;
+        height: 30px;
+        width: 100%;
+        background-color: #fffcf5;
+        border-radius: 20px 20px 0 0;
+        z-index: 1;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        height: 30px;
+        width: 100%;
+
+        background-color: #fffcf5;
+        border-radius: 0 0 20px 20px;
+        z-index: 1;
+    }
+}
+
+/* заголовок блок с картинкой  */
+.header {
+    position: relative;
+    text-align: center;
+
+    .text1 {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+        font-family: "Cormorant Infant", serif;
+        font-size: 90px;
+        line-height: 90px;
+        font-weight: 300;
+        font-style: normal;
+        color: white;
+    }
+
+    .text2 {
+        letter-spacing: 2px;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 500;
+        font-style: normal;
+        color: #54592E;
+
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        line-height: 55px;
+        font-size: 55px;
+        font-weight: 500;
+        bottom: 5%;
+        color: white;
+    }
+
+    .text3 {
+        @include heading_h3();
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 60px;
+        color: white;
+        white-space: nowrap;
+    }
+
+    &::before {
+        content: " ";
+        position: absolute;
+        bottom: -10px;
+        width: 100%;
+        height: 30px;
+        background-color: #fffcf5;
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+/* Блок с плейером */
+.audio-container {
+    position: relative;
+    margin: 20px 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 2px solid #cbdda2;
+        transform: translate(-50%, -50%);
+    }
+
+    .play-pause-button {
+        @include flex();
+        width: 40px;
+        height: 40px;
+        position: relative;
+    }
+}
+
+// плей
+.paused {
+    cursor: pointer;
+
+    .play-pause-button {
+        position: relative;
+
+        &::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 25px solid #cbdda2;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute;
+            left: 11px;
+        }
+    }
+}
+
+// пауза
+.playing {
+    .play-pause-button {
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 24px;
+            background-color: #cbdda2;
+        }
+
+        &::before {
+            left: 11px;
+        }
+
+        &::after {
+            right: 11px;
+        }
+    }
+}
+
+// Стили для календаря
+.calendar table {
+    border-collapse: collapse;
+    text-align: center;
+    margin: 20px 0;
+
+    th,
+    td {
+        padding: 0.4rem;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .heart {
+
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: -2px;
+            width: 45px;
+            height: 45px;
+            background-image: url('/Png/Heart_1.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+// Место проведения
+.venue {
+    text-align: center;
+    @include flex();
+    flex-direction: column;
+    a {
+        width: 25%;
+        max-width: 140px;
+
+        address {
+            margin-top: 5px;
+            color: #303030;
+        }
+    }
+
+    .box_map {
+        margin-top: 20px;
+    }
+}
+
+/* План дня */
+.day_plan {
+    margin: 20px 0;
+
+    .alignment {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    tr {
+        text-align: center;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .bus {
+            width: 60px;
+            height: 50px;
+        }
+    }
+}
+
+/* Стили для таймера */
+#time {
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+
+    .circle {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            transform: rotate(270deg);
+
+            circle {
+                fill: transparent;
+                stroke: transparent;
+                stroke-linecap: round;
+
+                &:nth-child(2) {
+                    stroke: var(--clr);
+                    stroke-dasharray: 188.5;
+                    stroke-dashoffset: 188.5;
+                    transition: stroke-dashoffset 0.5s linear;
+                }
+            }
+        }
+    }
+
+    div {
+        position: absolute;
+        text-align: center;
+        font-weight: 500;
+        color: #54592E;
+        font-size: 25px;
+
+        span {
+            display: block;
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    }
+
+    .dots {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        z-index: 1000;
+
+        &::before {
+            content: " ";
+            position: absolute;
+            top: -7px;
+            width: 12px;
+            height: 12px;
+            background: var(--clr);
+            border-radius: 50%;
+            box-shadow:
+                0 0 10px var(--clr),
+                0 0 30px var(--clr);
+            transition: transform 0.5s linear;
+        }
+    }
+}
+
+/*  Анкета гостя */
+.form-container {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    width: 80vw;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    color: #303030;
+
+    h3 {
+        font-family: "Georgia", serif;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #303030;
+    }
+
+    p {
+
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    form {
+        label {
+            display: block;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .hint {
+            font-size: 12px;
+            color: #888;
+            text-align: left;
+            margin: 4px 0 10px 0;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            padding-left: 2%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid #303030;
+            font-size: 14px;
+            letter-spacing: 1px;
+            resize: none;
+        }
+
+        fieldset {
+            text-align: left;
+            margin-bottom: 20px;
+            border: none;
+            font-size: 16px;
+
+            .radio-group {
+                margin: 10px 0;
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                .custom-radio {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                }
+            }
+
+            .radio-circle {
+                width: 20px;
+                height: 20px;
+                border: 2px solid #cbdda2;
+                border-radius: 50%;
+                margin-right: 10px;
+                position: relative;
+                transition:
+                    background-color 0.3s,
+                    border-color 0.3s;
+            }
+
+            input[type="radio"]:checked+.custom-radio .radio-circle {
+                background-color: #cbdda2;
+                border-color: white;
+            }
+        }
+
+        button {
+            background-color: #303030;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+    }
+}
+
+/*Contacts */
+
+.contacts {
+    margin-bottom: 20px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .icons {
+        @include flex();
+        justify-content: space-around;
+        max-width: 380px;
+        margin: 0 auto;
+
+        div {
+
+            p {
+                text-align: center;
+                margin: 0;
+            }
+
+            img {
+                display: block;
+                width: 50px;
+                height: 50px;
+                border: 1.5px solid black;
+                border-radius: 20%;
+                margin: 10px auto;
+                padding: 5px;
+                
+            }
+        }
+    }
+}
+
+/* Медиа-запросы для адаптивности */
+@media (min-width: 768px) {
+
+    .header {
+
+        .text1 {
+            font-size: 120px;
+            line-height: 120px;
+        }
+
+        .text2 {
+            font-size: 70px;
+            line-height: 70px;
+        }
+
+        .text3 {
+            font-size: 70px;
+        }
+    }
+
+}
