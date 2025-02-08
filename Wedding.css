@@ -100,7 +100,9 @@ img {
 .margin_3 {
   margin: 0 auto 10px;
 }
-
+.opacity {
+  opacity: 1;
+}
 /*Эффекты паралакс*/
 .hidden-box {
   opacity: 0;
