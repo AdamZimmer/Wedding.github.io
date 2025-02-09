@@ -18,12 +18,16 @@
 :root {
   color-scheme: only light;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   background: #fffcf5;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -34,6 +38,7 @@ body {
   flex-direction: column;
   color: #303030;
   max-width: 768px;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -216,7 +221,7 @@ img {
   font-family: "WindSong", cursive;
   font-weight: 400;
   font-style: normal;
-  opacity: 50%;
+  opacity: 70%;
   position: absolute;
   bottom: 10%;
   left: 50%;
