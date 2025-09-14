@@ -35,7 +35,7 @@ let min_dot = document.querySelector('.min_dot');
 let sec_dot = document.querySelector('.sec_dot');
 
 // Используем формат ISO для корректной интерпретации даты
-let endDate = '2025-07-26T16:00:00';
+let endDate = '2025-09-15T16:00:00';
 
 let x = setInterval(function () {
     let now = new Date().getTime();
